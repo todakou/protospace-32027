@@ -11,8 +11,8 @@
 | position   | text    | NOT NULL |
 
 ## Association
-・belongs_to:prototype
-・belongs_to:comments
+- belongs_to:prototype
+- belongs_to:comments
 
 ## prototypesテーブル
 | Colum        | Type          | Option        |
@@ -24,8 +24,8 @@
 
 
 ## Association
-・has_many : users
-・has_many : prototypes
+- has_many : users
+- has_many : prototypes
 
 ## commentsテーブル
 | Colum     | Type       | Option   |
@@ -35,5 +35,5 @@
 | prototype | references |          |
 
 ## Association
-・has_many : 
-・belongs_to :comments
+- has_many : 
+- belongs_to :comments
