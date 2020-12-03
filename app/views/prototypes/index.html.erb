@@ -1,16 +1,13 @@
 <main class="main">
   <div class="inner">
     <% if  user_signed_in? %>
-      <div class="greeting"> 
-        <a class="greeting__link" href="edit_user_registration_path">
-          <%= "こんにちは"%> <%= current_user.name%><%="さん"%>
-        </a> 
-
-      </div> 
-    <% else %>
-    <div class="card__wrapper">
+      <div class="greeting">
+        こんにちは、
+        <%= link_to "#{current_user.name}さん", user_path(current_user), class: :greeting__link%>
+      </div>
     <% end %>
-      <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>
+    <div class="card__wrapper">
+  <%= render partial: 'prototype', collection: @prototypes %> 
     </div>
   </div>
 </main>
